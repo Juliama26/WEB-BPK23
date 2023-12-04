@@ -1,0 +1,48 @@
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+    "username": "test",
+    "email": "test@gmail.com",
+    "password": "test",
+    "confmPassword": "test",
+    "role": "Admin"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "test"
+}
+
+### 
+GET http://localhost:5000/seni
+
+###
+DELETE http://localhost:5000/logout
+
+
+//BENDA
+###
+POST http://localhost:5000/seni
+Content-Type: application/json
+
+{
+    "nama": "Seni Update",
+    "jenisOPK": "jenisOPK",
+        "jenis": "minimal",
+        "properti": "etnis",
+        "etnis": "etnis",
+        "bahasa": "maximal",
+        "seni": "maximal",
+        "komponen": "perlengkapan",
+        "provinsi": "provinsi",
+        "kota": "kota",
+        "deskripsi": "kecamatan",
+        "fotoPath": "fotoPath",
+        "documentPath": "documentPath"
+      
+}
