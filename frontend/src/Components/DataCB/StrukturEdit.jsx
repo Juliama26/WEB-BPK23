@@ -24,7 +24,9 @@ export default function StrukturEdit() {
   useEffect(() => {
     const getStrukturID = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/Struktur/${id}`);
+        const response = await axios.get(
+          `http://localhost:5000/Struktur/${id}`
+        );
         setNama(response.data.nama);
         setNamaLain(response.data.namalain);
         setProvinsi(response.data.provinsi);
@@ -49,21 +51,24 @@ export default function StrukturEdit() {
   const updateStruktur = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.patch(`http://localhost:5000/Struktur/${id}`, {
-        nama,
-        namalain,
-        provinsi,
-        kota,
-        kecamatan,
-        desa,
-        dusun,
-        koordx,
-        koordy,
-        deskripsi,
-        narasumber,
-        fotoPath,
-        sertiPath,
-      });
+      const response = await axios.patch(
+        `http://localhost:5000/Struktur/${id}`,
+        {
+          nama,
+          namalain,
+          provinsi,
+          kota,
+          kecamatan,
+          desa,
+          dusun,
+          koordx,
+          koordy,
+          deskripsi,
+          narasumber,
+          fotoPath,
+          sertiPath,
+        }
+      );
       setMsg(response.data.message);
       navigate("/Struktur");
     } catch (error) {
@@ -76,7 +81,7 @@ export default function StrukturEdit() {
   return (
     <div className="font-romans text-secondary py-3 px-2">
       <h1 className="text-xl font-semibold bg-tertiary shadow-md p-2 rounded-md">
-        Edit Struktur!
+        Edit {nama}!
       </h1>
       <div className="p-2 text-err">{msg}</div>
       <div>

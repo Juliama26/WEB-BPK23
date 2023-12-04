@@ -76,7 +76,7 @@ export default function BendaEdit() {
   return (
     <div className="font-romans text-secondary py-3 px-2">
       <h1 className="text-xl font-semibold bg-tertiary shadow-md p-2 rounded-md">
-        Edit Benda!
+        Edit {nama}!
       </h1>
       <div className="p-2 text-err">{msg}</div>
       <div>
